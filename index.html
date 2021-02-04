@@ -10,7 +10,8 @@
 </body>
 </html>
 
-<!-- HP@DESKTOP-A8OCJ9P MINGW64 ~
+<!-- 
+HP@DESKTOP-A8OCJ9P MINGW64 ~
 $ git -version
 unknown option: -version
 usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
@@ -212,5 +213,217 @@ $ git branch
 * master
 
 HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ ^C
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git branch prueba
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git branch
+* master
+  prueba
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git checkout prueba
+Switched to branch 'prueba'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git checkout prueba
+Switched to branch 'prueba'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git status
+On branch prueba
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git add .
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git commit -m "se agrego un titulo"
+[prueba 1e4a5f2] se agrego un titulo
+ 1 file changed, 207 insertions(+), 2 deletions(-)
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git status
+On branch prueba
+nothing to commit, working tree clean
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git log
+commit e8dfd25d6105a4476fdcc60c77293486e6c7f1c5 (HEAD -> master)
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:14:42 2021 -0300
+
+    se creo estructura basica de html
+
+commit e9732512ae5fd975fc07fd2a1e6bd5f12af3ef41
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:01:30 2021 -0300
+
+    se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git checkout prueba
+Switched to branch 'prueba'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git log
+commit 1e4a5f270ba6a880b7e031d1de5fb5c19bace3f7 (HEAD -> prueba)
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:21:45 2021 -0300
+
+    se agrego un titulo
+
+commit e8dfd25d6105a4476fdcc60c77293486e6c7f1c5 (master)
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:14:42 2021 -0300
+
+    se creo estructura basica de html
+
+commit e9732512ae5fd975fc07fd2a1e6bd5f12af3ef41
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:01:30 2021 -0300
+
+    se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git branch
+* master
+  prueba
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git merge prueba
+Updating e8dfd25..1e4a5f2
+Fast-forward
+ index.html | 209 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 207 insertions(+), 2 deletions(-)
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git log --oneline
+1e4a5f2 (HEAD -> master, prueba) se agrego un titulo
+e8dfd25 se creo estructura basica de html
+e973251 se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git checkout prueba
+Switched to branch 'prueba'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git status
+On branch prueba
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git add .
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git commit -m "se agrego un subtitulo"
+[prueba bc7feea] se agrego un subtitulo
+ 1 file changed, 2 insertions(+)
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git status
+On branch prueba
+nothing to commit, working tree clean
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git  log --oneline
+bc7feea (HEAD -> prueba) se agrego un subtitulo
+1e4a5f2 (master) se agrego un titulo
+e8dfd25 se creo estructura basica de html
+e973251 se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ gitcheckout master
+bash: gitcheckout: command not found
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git merge prueba
+Already up to date.
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git checkout marge
+error: pathspec 'marge' did not match any file(s) known to git
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git merge prueba
+Already up to date.
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (prueba)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git merge prueba
+Updating 1e4a5f2..bc7feea
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git log --oneline
+bc7feea (HEAD -> master, prueba) se agrego un subtitulo
+1e4a5f2 se agrego un titulo
+e8dfd25 se creo estructura basica de html
+e973251 se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git reset --hard 1e4a5f2
+HEAD is now at 1e4a5f2 se agrego un titulo
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git log
+commit 1e4a5f270ba6a880b7e031d1de5fb5c19bace3f7 (HEAD -> master)
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:21:45 2021 -0300
+
+    se agrego un titulo
+
+commit e8dfd25d6105a4476fdcc60c77293486e6c7f1c5
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:14:42 2021 -0300
+
+    se creo estructura basica de html
+
+commit e9732512ae5fd975fc07fd2a1e6bd5f12af3ef41
+Author: unknown <vasquez.alexa90@gmail.com>
+Date:   Thu Feb 4 12:01:30 2021 -0300
+
+    se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ git log --oneline
+1e4a5f2 (HEAD -> master) se agrego un titulo
+e8dfd25 se creo estructura basica de html
+e973251 se creo un archivo index.html
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
+$ ^C
+
+HP@DESKTOP-A8OCJ9P MINGW64 ~/desktop/clase14/mi_repositorio (master)
 $
+
  -->
